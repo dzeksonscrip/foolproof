@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Foolproof</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #121212;
+            color: #ffffff;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            opacity: 0;
+            animation: fadeInFromBottom 1s forwards;
+        }
+
+        @keyframes fadeInFromBottom {
+            0% {
+                opacity: 0;
+                transform: translateY(100vh);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            background: #222222;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            opacity: 1;
+            transition: opacity 1s ease;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            background: #ff4444;
+            color: #ffffff;
+            font-size: 1.1rem;
+            cursor: not-allowed;
+            border: none;
+            margin-top: 10px;
+            opacity: 0.5;
+        }
+
+        .login-prompt {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+
+        .login-prompt a {
+            color: #888888;
+            text-decoration: none;
+        }
+
+        .login-prompt a:hover {
+            color: #ffffff;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sign Up</h1>
+
+        <!-- Disabled Sign Up Form -->
+        <div class="error-message">
+            Sign-ups are not available to the public yet.
+        </div>
+
+        <button class="submit-btn" disabled>Sign Up</button> <!-- Disabled Sign Up button -->
+
+        <div class="login-prompt">
+            <p><a href="login.html">Already have an account? Login</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
